@@ -8,8 +8,8 @@ Base Vagrant box for Ruby on Rails development on CentOS 7
 ## Deployment
 Building the virtual machine is this easy:
 ```shell
-host $ git clone https://github.com/awernick/rubento-box.git
-host $ cd rubento-box
+host $ cd rails-app-dir
+host $ curl -O https://raw.githubusercontent.com/awernick/rubento-box/master/Vagrantfile
 host $ vagrant up
 ```
 That's it.
