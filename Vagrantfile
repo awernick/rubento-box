@@ -68,13 +68,13 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   #
-  # $script = <<-EOF
-  #   cd /vagrant
-  #   bundle install
-  #   rails s -b 0.0.0.0
-  # EOF
-  #
-  # config.vm.provision "shell", run: "always" do |s|
-  #   s.inline = $script
-  # end
+  $script = <<-EOF
+    cd /vagrant
+    bundle install
+    #rails s -b 0.0.0.0
+  EOF
+
+  config.vm.provision "shell", run: "always" do |s|
+    s.inline = $script
+  end
 end
