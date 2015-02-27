@@ -22,6 +22,7 @@ host $ vagrant ssh
 ```
 Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer. Be sure the web server is bound to the IP 0.0.0.0, instead of 127.0.0.1, so it can access all interfaces:
 ```
+cd /vagrant
 rails server -b 0.0.0.0
 ```
 
