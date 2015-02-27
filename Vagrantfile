@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
   # https://docs.vagrantup.com.
   config.vm.box_url = "http://alanwernick.com/boxes/rubento.box"
 
-  config.vm.box_download_checksum = "267f65a84d6064440134dbdfad3e927e"
+  config.vm.box_download_checksum = "84b712643efd115828f00af38f927c23"
   config.vm.box_download_checksum_type = "md5"
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.

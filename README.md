@@ -6,11 +6,24 @@ Base Vagrant box for Ruby on Rails development on CentOS 7
   * Vagrant
 
 ## Deployment
-  ```shell
-  host $ git clone https://github.com/awernick/rubento-box.git
-  host $ cd rubento-box
-  host $ vagrant up
-  ```
+Building the virtual machine is this easy:
+```shell
+host $ git clone https://github.com/awernick/rubento-box.git
+host $ cd rubento-box
+host $ vagrant up
+```
+That's it.
+
+After the installation has finished, you can access the virtual machine with
+```
+host $ vagrant ssh
+...
+[vagrant@localhost ~]$
+```
+Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer. Be sure the web server is bound to the IP 0.0.0.0, instead of 127.0.0.1, so it can access all interfaces:
+```
+rails server -b 0.0.0.0
+```
 
 ## What's In The Box
   * Git
@@ -57,3 +70,6 @@ Vagrant has been havinga few problems with SSH acess for new base boxes created 
 username: vagrant
 password: vagrant
 ```
+=======
+# rubento-box
+Base Vagrant box for Ruby on Rails development on CentOS 7
