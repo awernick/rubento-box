@@ -9,10 +9,8 @@ Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
-  config.vm.box_url = "http://alanwernick.com/boxes/rubento.box"
+  config.vm.box_url = "http://alanwernick.com/vagrant/rubento/rubento.json"
 
-  config.vm.box_download_checksum = "84b712643efd115828f00af38f927c23"
-  config.vm.box_download_checksum_type = "md5"
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "rubento-box"
@@ -25,11 +23,12 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  # config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.synced_folder '.', '/vagrant', nfs: true
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -71,7 +70,7 @@ Vagrant.configure(2) do |config|
   $script = <<-EOF
     cd /vagrant
     bundle install
-    #rails s -b 0.0.0.0
+    rails s -b 0.0.0.0 -p 80 -d
   EOF
 
   config.vm.provision "shell", run: "always" do |s|
