@@ -84,6 +84,7 @@ Vagrant.configure(2) do |config|
     cd /vagrant
     bundle install
     rails s -b 0.0.0.0 -p 80 -d
+    rake db:create
   EOF
 
   config.vm.provision "shell", run: "always" do |s|
