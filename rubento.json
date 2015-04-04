@@ -1,0 +1,28 @@
+{
+   "name":"rubento-box",
+   "description":"Base Vagrant box for Ruby on Rails development on CentOS 7",
+   "versions":[
+      {
+         "version":"0.0.1",
+         "providers":[
+            {
+               "name":"virtualbox",
+               "url":"http://alanwernick.com/vagrant/rubento/boxes/rubento_0.0.1.box",
+               "checksum_type":"md5",
+               "checksum":"df5a5f5c759a12ac816233eb7685e065"
+            }
+         ]
+      },
+      {
+         "version":"0.0.2",
+         "providers":[
+            {
+               "name":"virtualbox",
+               "url":"http://alanwernick.com/vagrant/rubento/boxes/rubento_0.0.2.box",
+               "checksum_type":"md5",
+               "checksum":"1950b362bd13f63b969ed07d9187fb4d"
+            }
+         ]
+      }
+   ]
+}
