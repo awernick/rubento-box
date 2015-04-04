@@ -23,6 +23,17 @@
                "checksum":"1950b362bd13f63b969ed07d9187fb4d"
             }
          ]
+      },
+      {
+         "version":"0.0.3",
+         "providers":[
+            {
+               "name":"virtualbox",
+               "url":"http://alanwernick.com/vagrant/rubento/boxes/rubento_0.0.3.box",
+               "checksum_type":"md5",
+               "checksum":"1950b362bd13f63b969ed07d9187fb4d"
+            }
+         ]
       }
    ]
 }
