@@ -65,12 +65,9 @@ Please check the [Vagrant documentation](http://docs.vagrantup.com/v2/) for more
 
 ## Access
 
-Vagrant has been havinga few problems with SSH acess for new base boxes created with version 1.7.2. The following is the username and the password for vagrant account in case SSH public key access stops working
+Vagrant has been having a few problems with SSH access for new base boxes created with version 1.7.2. The following is the username and the password for vagrant account in case SSH public key access stops working
 ```
 #vagrant
 username: vagrant
 password: vagrant
 ```
-=======
-# rubento-box
-Base Vagrant box for Ruby on Rails development on CentOS 7
